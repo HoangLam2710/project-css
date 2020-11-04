@@ -268,3 +268,69 @@
     font-weight: 900;
 }
 /*-------------------------------------------------------*/
+
+/*-----------------------list song-----------------------*/
+.list-song{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+
+.list-song:hover{
+  background-color: #220c38;
+}
+
+.list-song .card-image{
+  max-width: 40px;
+  max-height: 40px;
+  text-align: left;
+}
+
+.list-song:hover .card-image .image>img{
+	transform: scale(1.1);
+}
+
+.list-song:hover .card-image .overlay{
+	opacity: 1;
+}
+
+.list-song:hover .card-image .play-actions{
+	opacity: 1;
+}
+
+.list-song .card-image .play-actions i{
+	font-size: 1em;
+}
+
+.list-song .card-info{
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.list-song .extension{
+  color: #fff;
+}
+
+.list-song .extension ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.list-song:hover .extension ul{
+  opacity: 1;
+}
+
+.list-song .extension ul li{
+  padding: 0 10px;
+}
+/*-------------------------------------------------------*/
