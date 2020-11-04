@@ -1,0 +1,92 @@
+.col-album{
+	max-width: 100%;
+	border-radius: 2px;
+}
+
+.col-album .card-image{
+	width: 100%;
+	height: auto;
+	position: relative;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.col-album .card-image .image>img{
+	position: initial;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    transition: all .7s;
+    transform: scale(1);
+}
+
+.col-album:hover .card-image .image>img{
+	transform: scale(1.1);
+}
+
+.col-album .card-image .overlay{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.col-album:hover .card-image .overlay{
+	opacity: 1;
+}
+
+.col-album .card-image .play-actions{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.col-album:hover .card-image .play-actions{
+	opacity: 1;
+}
+
+.col-album .card-image .play-actions ul{
+	width: 85%;
+	display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+
+.col-album .card-image .play-actions ul li{
+	margin: 0 auto;
+	font-size: 2em;
+}
+
+.col-album .card-image .play-actions ul .fa-play-circle{
+	font-size: 3em;
+}
+
+.col-album .card-info{
+	font-size: 1.2em;
+}
