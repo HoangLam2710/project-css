@@ -1,4 +1,4 @@
-/*--------------------weekly charts----------------------*/
+/*--------------------album square----------------------*/
 .col-album{
 	max-width: 100%;
 	border-radius: 2px;
@@ -218,3 +218,53 @@
   font-size: 20px;
   font-weight: 700;
 }
+/*-------------------------------------------------------*/
+
+/*-----------------------new song------------------------*/
+.col-new-song .card-info{
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.col-new-song .card-info .title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.38;
+    max-height: 44px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.col-new-song .card-info .artist {
+    width: 100%;
+    margin-bottom: 5px;
+    color: #a0a0a0;
+    font-size: 12px;
+    line-height: 1.36;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.col-new-song .card-info .release-date {
+    position: absolute;
+    right: 0;
+    color: #dbdbdb;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    bottom: 0;
+}
+
+.col-new-song .order {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    -webkit-text-stroke: 2px #6645c1;
+    color: transparent;
+    font-size: 50px;
+    font-weight: 900;
+}
+/*-------------------------------------------------------*/
