@@ -11,18 +11,30 @@ body{
 }
 
 a{
-	color: #000;
-	text-decoration: none;
+	color: #fff !important;
+	text-decoration: none !important;
+}
+
+a:focus {
+    outline: 0px auto -webkit-focus-ring-color !important;
+    outline-offset: -2px;
 }
 
 a:hover {
-    color: #9877FF;
+    color: #9877FF !important;
+}
+
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
 }
 
 .container{
     position: relative;
 }
 
+/*--------------------section slider-main----------------------*/
 .carousel .slide-thumbnail{
 	position: absolute;
     bottom: 0;
@@ -88,3 +100,532 @@ a:hover {
 	border: 2px solid #fff;
 	border-radius: 4px;
 }
+/*-------------------------------------------------------*/
+
+
+/*--------------------section recently-listen----------------------*/
+.recently-listen{
+	margin: 50px 0;
+}
+
+.recently-listen .title-music{
+	margin-bottom: 5px;
+}
+
+.recently-listen .title-music>a{
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 36px;
+	transition: all 0.3s;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.col-album{
+	max-width: 100%;
+	border-radius: 2px;
+}
+
+.card-image{
+	width: 100%;
+	height: auto;
+	position: relative;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.card-image .image>img{
+	position: initial;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    transition: all .7s;
+    transform: scale(1);
+}
+
+.col-album:hover .card-image .image>img{
+	transform: scale(1.1);
+}
+
+.card-image .overlay{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.col-album:hover .card-image .overlay{
+	opacity: 1;
+}
+
+.card-image .play-actions{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.col-album:hover .card-image .play-actions{
+	opacity: 1;
+}
+
+.card-image .play-actions ul{
+	width: 85%;
+	display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+
+.card-image .play-actions ul li{
+	margin: 0 auto;
+	font-size: 1.4em;
+}
+
+.card-image .play-actions ul .fa-play-circle{
+	font-size: 2em;
+}
+
+.card-info .card-title{
+	font-size: 1.2em;
+}
+
+.card-info .artist{
+	color: #a0a0a0;
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 1.3;
+}
+
+.album-slider .slick-wrapper {
+  width: 100%;
+}
+
+.album-slider .slide-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.album-slider .slick-arrow{
+	border: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 0;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    left: auto;
+    top: -35px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.album-slider .slidersel-control-prev{
+	right: 45px;
+}
+
+.album-slider .slidersel-control-next{
+	right: 0px;
+}
+
+.album-slider .slick-arrow .fas{
+	font-size: x-large;
+}
+
+.slick-slide{
+	padding: 0 10px;
+}
+
+.album-slider .card-info .title{
+	text-align: left;
+}
+/*-------------------------------------------------------*/
+
+
+/*--------------------weekly charts----------------------*/
+.chart-realtime-wrapper {
+    height: 400px;
+    width: 100%;
+    border-radius: 4px;
+    background-image: url(../images/bg-chart.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.week-chart .chart-realtime{
+    border-radius: 4px 0 0 4px;
+    float: left;
+    height: 100%;
+    width: 700px;
+    background-image: url(../images/bg-chart.jpg);
+    background-size: cover;
+}
+
+.week-chart .realtime-list-song{
+    line-height: 0;
+    height: 100%;
+    float: right;
+    width: calc(100% - 700px);
+}
+
+.chart-realtime .realtime-header {
+    padding: 20px;
+    width: 100%;
+}
+
+.chart-realtime .pull-left {
+    float: left !important;
+}
+
+.chart-realtime .realtime-header .btn {
+    margin-right: 20px;
+}
+
+.chart-realtime .btn .btn-zingchart {
+    padding: 0 5px;
+    width: 86px;
+    height: 24px;
+    text-align: center;
+    background: linear-gradient(to right,#4b38d7,#8d4fe2);
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.chart-realtime .btn {
+    font-size: 12px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    line-height: 24px;
+    border: 0;
+    padding: 4px 12px;
+    background-color: #65509e;
+    color: #fcfcfc;
+    text-transform: initial;
+}
+
+.chart-realtime .time-pick {
+    font-size: 14px;
+    color: #fff;
+}
+
+.chart-realtime .pull-right {
+    float: right !important;
+}
+
+.chart-realtime .realtime-header .pull-right .btn {
+    margin-right: 0;
+}
+
+.chart-realtime .btn .radius-4 {
+    border-radius: 4px;
+}
+
+.chart-realtime .btn>.icon {
+    position: relative;
+    top: 3px;
+    font-size: 14px;
+    line-height: 66%;
+}
+
+.weekly-charts{
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  transition: all 0.5s;
+  color: #fff;
+}
+
+.weekly-charts:hover{
+  background-color: rgba(0,0,0,.15);
+  border-radius: 4px;
+}
+
+.weekly-charts .number{
+  font-size: 20px;
+  padding: 0 8px;
+}
+
+.weekly-charts .card-image{
+  margin-right: 8px;
+}
+
+.weekly-charts .card-image{
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.weekly-charts .info{
+  flex-grow: 1;
+}
+
+.weekly-charts .song-title{
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.weekly-charts .singer{
+  font-size: 0.8em;
+  color: #999;
+}
+
+.weekly-charts .view-count{
+  font-size: 1em;
+  padding: 0 8px;
+}
+
+.weekly-charts:hover .card-image .image>img{
+	transform: scale(1.1);
+}
+
+.weekly-charts:hover .card-image .overlay{
+	opacity: 1;
+}
+
+.weekly-charts:hover .card-image .play-actions{
+	opacity: 1;
+}
+
+.realtime-list-song .all-list{
+	margin-top: 10px;
+}
+
+.realtime-list-song .all-list p{
+	text-align: center;
+}
+
+/*-------------------------------------------------------*/
+
+/*--------------------single choice----------------------*/
+.artist{
+	margin: 30px 0;
+}
+
+.artist .slick-wrapper {
+  width: 100%;
+}
+
+.artist .slide-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.artist .singer-choice{
+	width: 100%;
+}
+
+.artist .col-album-circle{
+  background-image: url(../images/spotlight-bg-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px;
+  border: .9px solid #232323;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.artist .col-album-circle .card-image{
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+  text-align: left
+}
+
+.artist .col-album-circle:hover .card-image .image>img{
+	transform: scale(1.1);
+}
+
+.artist .col-album-circle:hover .card-image .overlay{
+	opacity: 1;
+}
+
+.artist .col-album-circle:hover .card-image .play-actions{
+	opacity: 1;
+}
+
+.artist .col-album-circle .info{
+  flex-grow: 1;
+  text-align: right;
+  width: 100%;
+}
+
+.artist .col-album-circle .info .spotlight-badge{
+  background: linear-gradient(to right,#f508b7,#9102ff);
+  padding: 3px 8px;
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 12px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.artist .col-album-circle .info .artist-singer{
+  padding: 0 5px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+/*-------------------------------------------------------*/
+
+/*-----------------------new song------------------------*/
+.new-release{
+	margin: 30px 0;
+}
+
+.new-release .title-music{
+	margin-bottom: 5px;
+}
+
+.new-release .title-music>a{
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 36px;
+	transition: all 0.3s;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.new-release .slick-wrapper {
+  width: 100%;
+}
+
+.new-release .slide-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.new-release .slick-arrow{
+	border: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 0;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    left: auto;
+    top: -35px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.new-release .slidersel-control-prev{
+	right: 45px;
+}
+
+.new-release .slidersel-control-next{
+	right: 0px;
+}
+
+.new-release .slick-arrow .fas{
+	font-size: x-large;
+}
+
+.new-release .col-new-song {
+    background-color: #220c38;
+    line-height: 0;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    box-shadow: 0 0 20px 0 rgba(11,11,11,.15);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.new-release .col-new-song .card-info{
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.new-release .col-new-song .card-info .title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.38;
+    max-height: 44px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.new-release .col-new-song .card-info .artist-singer {
+    width: 100%;
+    margin-bottom: 5px;
+    color: #a0a0a0;
+    font-size: 12px;
+    line-height: 1.36;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.new-release .col-new-song .card-info .release-date {
+    position: absolute;
+    right: 0;
+    color: #dbdbdb;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    bottom: 0;
+}
+
+.new-release .col-new-song .order {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    -webkit-text-stroke: 2px #6645c1;
+    color: transparent;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.new-release .col-new-song:hover .card-image .image>img{
+	transform: scale(1.1);
+}
+
+.new-release .col-new-song:hover .card-image .overlay{
+	opacity: 1;
+}
+
+.new-release .col-new-song:hover .card-image .play-actions{
+	opacity: 1;
+}
+/*-------------------------------------------------------*/
