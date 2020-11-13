@@ -718,3 +718,103 @@ a:hover {
   padding: 0 10px;
 }
 /*-------------------------------------------------------*/
+
+/*-----------------------album item------------------------*/
+.album-category .slick-wrapper {
+  width: 100%;
+}
+
+.album-category .slide-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.album-category .slick-arrow{
+	border: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 0;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    left: auto;
+    top: -35px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.album-category .slidersel-control-prev{
+	right: 45px;
+}
+
+.album-category .slidersel-control-next{
+	right: 0px;
+}
+
+.album-category .slick-arrow .fas{
+	font-size: x-large;
+}
+
+.album-category{
+	margin: 30px 0;
+}
+
+.album-category .title-music{
+	margin-bottom: 5px;
+}
+
+.album-category .title-music>a{
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 36px;
+	transition: all 0.3s;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.album-item{
+  width: 190px;
+  height: 100px;
+}
+
+.album-item .card-image{
+  position: relative;
+  overflow: hidden;
+}
+
+.album-item .card-image img{
+  width: 100%;
+  height: auto;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+
+.album-item:hover .card-image img{
+  transform: scale(1.1);
+}
+
+.album-item .card-image .overlay-gradient{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(77,77,77,1) 0%, rgba(77,77,77,0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.album-item .card-image .overlay-gradient span{
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 10px;
+  transition: all 0.5s;
+}
+
+.album-item:hover .card-image .overlay-gradient span{
+  padding-bottom: 20px;
+/*-------------------------------------------------------*/
