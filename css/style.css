@@ -629,3 +629,92 @@ a:hover {
 	opacity: 1;
 }
 /*-------------------------------------------------------*/
+
+/*-----------------------list song-----------------------*/
+.list-song{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+
+.list-song:hover{
+  background-color: #220c38;
+}
+
+.list-song:active{
+  background-color: #3a066b;
+}
+
+.list-song .card-image{
+  max-width: 40px;
+  max-height: 40px;
+  text-align: left;
+}
+
+.list-song:hover .card-image .image>img{
+	transform: scale(1.1);
+}
+
+.list-song:hover .card-image .overlay{
+	opacity: 1;
+}
+
+.list-song:hover .card-image .play-actions{
+	opacity: 1;
+}
+
+.list-song .card-image .play-actions i{
+	font-size: 1em;
+}
+
+.list-song .card-info{
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.list-song .card-info .title{
+	font-size: 14px;
+    font-weight: 700;
+    line-height: 1.36;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-song .card-info .artist-singer{
+	font-size: 12px;
+    font-weight: 400;
+    line-height: 1.33;
+    color: #a0a0a0;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-song .extension{
+  color: #fff;
+}
+
+.list-song .extension ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  opacity: 0;
+  transition: all 0.5s;
+  margin-bottom: 0px;
+}
+
+.list-song:hover .extension ul{
+  opacity: 1;
+}
+
+.list-song .extension ul li{
+  padding: 0 10px;
+}
+/*-------------------------------------------------------*/
