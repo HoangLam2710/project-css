@@ -24,6 +24,12 @@ a:hover {
     color: #9877FF !important;
 }
 
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
 .container{
     position: relative;
 }
@@ -258,5 +264,240 @@ a:hover {
 
 .album-slider .card-info .title{
 	text-align: left;
+}
+/*-------------------------------------------------------*/
+
+
+/*--------------------weekly charts----------------------*/
+.chart-realtime-wrapper {
+    height: 400px;
+    width: 100%;
+    border-radius: 4px;
+    background-image: url(../images/bg-chart.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.week-chart .chart-realtime{
+    border-radius: 4px 0 0 4px;
+    float: left;
+    height: 100%;
+    width: 700px;
+    background-image: url(../images/bg-chart.jpg);
+    background-size: cover;
+}
+
+.week-chart .realtime-list-song{
+    line-height: 0;
+    height: 100%;
+    float: right;
+    width: calc(100% - 700px);
+}
+
+.chart-realtime .realtime-header {
+    padding: 20px;
+    width: 100%;
+}
+
+.chart-realtime .pull-left {
+    float: left !important;
+}
+
+.chart-realtime .realtime-header .btn {
+    margin-right: 20px;
+}
+
+.chart-realtime .btn .btn-zingchart {
+    padding: 0 5px;
+    width: 86px;
+    height: 24px;
+    text-align: center;
+    background: linear-gradient(to right,#4b38d7,#8d4fe2);
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.chart-realtime .btn {
+    font-size: 12px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    line-height: 24px;
+    border: 0;
+    padding: 4px 12px;
+    background-color: #65509e;
+    color: #fcfcfc;
+    text-transform: initial;
+}
+
+.chart-realtime .time-pick {
+    font-size: 14px;
+    color: #fff;
+}
+
+.chart-realtime .pull-right {
+    float: right !important;
+}
+
+.chart-realtime .realtime-header .pull-right .btn {
+    margin-right: 0;
+}
+
+.chart-realtime .btn .radius-4 {
+    border-radius: 4px;
+}
+
+.chart-realtime .btn>.icon {
+    position: relative;
+    top: 3px;
+    font-size: 14px;
+    line-height: 66%;
+}
+
+.weekly-charts{
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  transition: all 0.5s;
+  color: #fff;
+}
+
+.weekly-charts:hover{
+  background-color: rgba(0,0,0,.15);
+  border-radius: 4px;
+}
+
+.weekly-charts .number{
+  font-size: 20px;
+  padding: 0 8px;
+}
+
+.weekly-charts .card-image{
+  margin-right: 8px;
+}
+
+.weekly-charts .card-image{
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.weekly-charts .info{
+  flex-grow: 1;
+}
+
+.weekly-charts .song-title{
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.weekly-charts .singer{
+  font-size: 0.8em;
+  color: #999;
+}
+
+.weekly-charts .view-count{
+  font-size: 1em;
+  padding: 0 8px;
+}
+
+.weekly-charts:hover .card-image .image>img{
+	transform: scale(1.1);
+}
+
+.weekly-charts:hover .card-image .overlay{
+	opacity: 1;
+}
+
+.weekly-charts:hover .card-image .play-actions{
+	opacity: 1;
+}
+
+.realtime-list-song .all-list{
+	margin-top: 10px;
+}
+
+.realtime-list-song .all-list p{
+	text-align: center;
+}
+
+/*-------------------------------------------------------*/
+
+/*--------------------single choice----------------------*/
+.artist{
+	margin: 30px 0;
+}
+
+.artist .slick-wrapper {
+  width: 100%;
+}
+
+.artist .slide-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.artist .singer-choice{
+	width: 100%;
+}
+
+.artist .col-album-circle{
+  background-image: url(../images/spotlight-bg-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px;
+  border: .9px solid #232323;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.artist .col-album-circle .card-image{
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+  text-align: left
+}
+
+.artist .col-album-circle:hover .card-image .image>img{
+	transform: scale(1.1);
+}
+
+.artist .col-album-circle:hover .card-image .overlay{
+	opacity: 1;
+}
+
+.artist .col-album-circle:hover .card-image .play-actions{
+	opacity: 1;
+}
+
+.artist .col-album-circle .info{
+  flex-grow: 1;
+  text-align: right;
+  width: 100%;
+}
+
+.artist .col-album-circle .info .spotlight-badge{
+  background: linear-gradient(to right,#f508b7,#9102ff);
+  padding: 3px 8px;
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 12px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.artist .col-album-circle .info .artist-singer{
+  padding: 0 5px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
 }
 /*-------------------------------------------------------*/
